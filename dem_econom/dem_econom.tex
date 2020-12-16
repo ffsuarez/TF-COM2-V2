@@ -1,0 +1,104 @@
+\section{Descripción Geográfica}
+
+La ciudad de  Carpintería se encuentra ubicada en el Departamento Junin de la Provincia de San Luis a 192 km de la Capital, mientras que la ciudad de Papagayos se encuentra ubicada en el Departamento Chacabuco de la Provincia de San Luis, a 31 km hacia el sur de Carpinteria.
+
+En la Figura \ref{dem-figuras:figura_ciudades} se destacan las 2 ciudades ubicadas sobre el noreste de la Provincia junto con algunas localidades destacables cercanas.
+
+\FigureDEM{H}{12}{figura_ciudades}{Ubicación de Carpinteria y Papagayos.}
+
+\section{Población y comienzo de Análisis Económico}
+
+
+
+En el presente trabajo, se utiliza la base de datos captados en Censo 2001 y 2010 para visualizar el comportamiento que presenta la localidad de Papagayos en dicho lapso.
+
+Se realizan cálculos y análisis de diferentes indicadores para aspectos socio-económicos y demográficos.
+
+
+La población de la ciudad de Papagayos según el Censo de 2001 es de 275 habitantes, mientras que en el Censo 2010 es de 433 habitantes \cite{censo2010}.
+
+%Para propósitos prácticos se realiza el siguiente análisis para determinar de forma aproximada la cantidad de habitantes en el año 2019:
+
+
+Para calcular la población total en la ciudad en 2019 se calcula de forma aproximada la tasa de crecimiento durante el período 2010-2019 utilizando los datos anteriores. Si bien se omiten algunos factores demográficos y se supone un crecimiento lineal, dicha aproximación es válida para esta aplicación.
+
+
+%\bibitem{censo2010} Base datos REDATAM. Censo 2010. Resultados Básicos. Frecuencias. Población. Área \#740280301
+
+\begin{enumerate}
+\item[•]La Ecuación \ref{ecu1} define dicha tasa aproximada:
+
+\begin{equation}
+Tasa\, de \, crecimiento= \sqrt[A\tilde{n}o\, entre \, Censos]{  \frac{Poblacion_{2010}}{Poblacion_{2001}}  } -1 =\sqrt[9]{  \frac{433}{275}  } -1 = 5,17%
+\label{ecu1}
+\end{equation}
+
+\item[•]De esta forma, la cantidad de habitantes previstos en la ciudad se determina en la Ecuación \ref{ecu2}.
+
+\begin{equation}
+Poblacion_{2019}=Poblacion_{2010} \times \left ( 1 + \frac{Tasa \, crecimiento}{100} \right )^{2019-2010}=433 \times \left ( 1 + \frac{5,17}{100} \right )^{9}=681
+\label{ecu2}
+\end{equation}
+
+\end{enumerate}
+
+Se corrobora este resultado llamando a la municipalidad de Papagayos, obteniendo una res-puesta de un valor aproximado.
+
+
+Tomando en cuenta la base de datos REDATAM del Censo 2010, la tasa de empleo de la Ciudad de Papagayos es del 60\% \cite{ocupacion}, mientras que la medición trimestral efectuada por el INDEC muestra que la tasa de empleo en la región de Cuyo al comienzo de 2019 es del 42 \% \cite{base-datos-abiertos}. A fines prácticos es posible aproximar una tasa de empleo del 51 \% en la localidad. De esta forma es posible formar una idea de la solvencia económica de la región a la que se plantea brindar el servicio. Se deduce que sobre la población económicamente activa, poco mas de la mitad tiene al menos una ocupación asalariada. 
+
+%\bibitem{base-datos-abiertos} Base datos abiertos '' Datos Argentina " . Tasa de empleo. Valores trimestrales. 2019-01-01.
+
+Para realizar una estimación del monto destinado a las diversas tecnologías de las telecomunicaciones que puede realizar un hogar en la localidad, se calcula un valor medio del ingreso en un hogar de la ciudad. Dicho análisis se encuentra disponible en el anexo adjunto al informe y en el mismo se determina que el ingreso promedio en un hogar de la localidad de Papagayos en 2019 corresponde a US\$ 994 (cotización oficial dolar 02/01/19: \$ 36,80 ). 
+
+
+El porcentaje que un hogar de la región destina a las TIC's es aproximadamente igual al 4,5\%. Dicho análisis se encuentra disponible de forma adjunta al informe. De forma que es posible determinar que cada familia puede destinar cerca de US\$ 44,73 (cotización oficial dolar 02/01/19: \$ 36,80 ) para el servicio \textit{Triple Play} que se plantea implementar.
+
+
+\section{Modelo del Consumo}
+
+ 
+A partir de la base de datos REDATAM del Censo 2010, se observa la predominancia de 4 personas por hogar \cite{censo2010-personas}, por lo que se toma este valor para determinar la cantidad de casas.
+
+
+En 2019 se estima que hay 681 personas, utilizando el factor de 4 habitantes por casa, se deduce que existen 170 casas en la localidad. De acuerdo de la cantidad de casas estimadas es posible iniciar el análisis del ingreso monetario en base a la cantidad de suscriptores al servicio.
+
+
+
+\subsection{Análisis de la ocupación}
+%Para realizar una estimación de la posibilidad de existencia de futuros abonados al servicio, se analiza la distribución de edades de la población. Analizando la Figura \ref{dem-figuras:distr_edades} es posible advertir que se conforma principalmente por personas de entre los 15 y 45 años, lo cual permite afirmar que existe una alta probabilidad de utilización continua de los servicios que desean prestarse.
+
+
+%\FigureDEM{H}{10}{distr_edades}{Pirámide poblacional Censo 2010.}
+
+
+%Sin embargo, ante la posibilidad de que no todos los hogares se encuentren suscriptos en el período de incorporación del proveedor de servicio al mercado, se estima que si la cantidad de habitantes registrados en el censo 2010 que se encuentran en el rango desde los 15 hasta los 39 años (159 personas) representa un 40 \% de la población,  entonces el 40 \% de las 136 casas potenciales acepten ser abonados al servicio al inicio de las actividades del proveedor, de manera que se plantean 55 casas abonadas al servicio.
+
+
+Al considerar que en 2010 la población ocupada eran 177 personas \cite{censo2010-actividad} sobre una poblacion economicamente activa de 295 personas, dicha fracción representa aproximadamente un total de 40\% de la población activa, es posible suponer que sobre la ciudad hay una persona ocupada por cada hogar, de manera que de forma potencial el 40\% de los 136 hogares puede aceptar suscribirse al servicio al inicio de las actividades del proveedor, dicha proporción corresponde a un total de 55 hogares. 
+
+%\ref{dem-figuras:fig504}
+\FigureDEM{H}{17}{cond_ocupacion}{Condición Ocupación Censo 2010.}
+
+
+
+
+
+\newpage
+
+\begin{thebibliography}{99}
+
+\bibitem{censo2010} Base datos REDATAM. Censo 2010. Resultados Básicos. Frecuencias. Población. Área \# 740280301.
+
+\bibitem{ocupacion}Base de datos REDATAM. Censo 2010. Indicadores sociodemograficos. Tasa de empleo. 'Área \# 740280301.
+
+\bibitem{censo2010-personas} Base datos REDATAM. Censo 2010. Resultados Básicos. Frecuencias. Hogares. Total personas en el hogar. Área \# 740280301.
+
+\bibitem{censo2010-actividad} Base datos REDATAM. Censo 2010. Resultados Básicos. Población. Condición de Actividad. Área \# 740280301.
+
+\bibitem{base-datos-abiertos} Base datos abiertos '' Datos Argentina" . Tasa de empleo. Valores trimestrales. 2019-01-01.
+
+
+\end{thebibliography}
+
+\newpage
