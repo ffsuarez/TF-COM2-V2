@@ -1,0 +1,180 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{pdfpages}
+%\usepackage{subfig}
+\usepackage{float}
+
+
+\usepackage{subfigure}
+% para las maquinas mas "viejas"
+\author{}
+\date{}
+
+%---------------
+%cambiando el formato de la letra
+%helvet es el equivalente de arial
+\usepackage{helvet}  %importando nueva fuente
+%\usepackage[T1]{fontenc} 
+%\usepackage[scaled]{helvet} 
+\renewcommand*\familydefault{\sfdefault}  %aplica la fuente
+
+%--------------- 
+%Quitando la sangria de primera linea
+\setlength{\parindent}{0pt}
+\usepackage{hyperref}
+
+%---------------
+
+%------------agrego nueva forma de poner figuras
+
+\newcommand{\FigureDEM}[4]{
+\begin{figure}[#1]
+	\centering
+	\includegraphics[width=#2 cm]{dem_econom/figuras/dem/#3}
+	\caption{#4}
+	\label{dem-figuras:#3}
+\end{figure}
+}
+
+
+
+%extraido: http://gilmation.com/es/articles/latex-custom-commands-and-figure-inclusion/
+
+%-------------------------------------------------------
+%Quito la numeracion de las secciones
+%fuente: http://minisconlatex.blogspot.com/2014/11/como-evitar-que-se-reinicie-la.html
+
+\setcounter{secnumdepth}{0}
+
+
+%-por el nombre de la tabla-----------------------
+\renewcommand\spanishtablename{Tabla}
+%---------------------------
+
+%\usepackage{booktabs} 
+
+%-------------------------------
+%agrego simbolo de euro
+\usepackage{eurosym} % para el euro
+%se pone \euro
+%--------------------------------
+
+\usepackage{multirow}
+\usepackage{bigstrut}
+
+%---------------------------
+%agrego paquete porque quise usar una celda 
+%de una tabla con color
+%\usepackage[table]{xcolor}
+\usepackage{colortbl}
+%---------------------------
+
+\usepackage{fp}
+
+%--------------------------
+%https://matplotlib.org/3.3.1/tutorials/text/mathtext.html
+%rcParams["mathtext.regular"]    %NO FUNCIONA
+
+\begin{document}
+
+%\part{Portada y Titulo}
+\includepdf{./TF}
+
+
+%\part{Indice}
+\clearpage
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\setlength{\parskip}{3mm}
+
+
+%------------------------------------------------
+\part{Resumen}
+	\input{./1Introduccion/Introduccion}
+%------------------------------------------------
+
+
+%------------------------------------------------
+\part{Análisis Demográfico y Económico}\label{demografico}
+
+	\input{./dem_econom/dem_econom}
+	\input{./3Capacidad/Tasa_Capacidad}
+	\newpage
+%------------------------------------------------
+
+%------------------------------------------------
+\part{Análisis Tecnológico}\label{tecnologico}
+	
+	\input{./4Analisis-Tecnologico/Red-Distribucion/RE/Analisis-Tecnologico-Distribucion-RE}
+	\input{./4Analisis-Tecnologico/Red-Distribucion/FO/Analisis-Tecnologico-Distribucion-FO}
+	\input{./4Analisis-Tecnologico/Red-Acceso/RE/Analisis-Tecnologico-Acceso-RE}
+	\input{./4Analisis-Tecnologico/Red-Acceso/FO/Analisis-Tecnologico-Acceso-FO}
+%------------------------------------------------
+
+%------------------------------------------------
+\part{Plan Económico de Equipamiento}\label{plan-economico}
+
+	\input{./5Analisis-Economico/Red-Distribucion/RE/Analisis-Economico-Distribucion-RE}
+	
+
+	\input{./5Analisis-Economico/Red-Distribucion/FO/Analisis-Economico-Distribucion-FO}
+	
+	
+	\input{./5Analisis-Economico/Red-Acceso/RE/Analisis-Economico-Acceso-RE}
+
+	
+	\input{./5Analisis-Economico/Red-Acceso/FO/Analisis-Economico-Acceso-FO}
+
+%------------------------------------------------
+
+
+
+%------------------------------------------------
+\part{Propuesta Tecnológica}\label{propuesta-tecno}
+	\input{./6Propuesta-Tecnologica/Propuesta_tecnologica}
+%------------------------------------------------
+
+
+%------------------------------------------------
+\part{Plan de Accion}\label{plan-accion}
+	\input{./7Plan-Accion/plan_accion}
+%------------------------------------------------
+
+
+%------------------------------------------------
+\part{Plan de Mantenimiento}\label{plan-mantenimiento}
+	\input{./8Plan-Mantenimiento/plan_mantenimiento}
+%------------------------------------------------
+
+
+%------------------------------------------------
+\part{Análisis Económico y de Negocio}\label{analisis-economico}
+	\input{./9Analisis-Economico/Analisis_economico_2}
+	
+	\input{./10-AnalisisRentabilidad/Analisis_de_rentabilidad_2}
+	
+%------------------------------------------------
+
+
+%------------------------------------------------
+%\part{Conclusión}\label{conclusion}
+%	\input{./11-Conclusion/Conclusion}
+%------------------------------------------------
+
+\bibliography{bibliografia.bib} 
+
+
+
+
+\end{document}	   
