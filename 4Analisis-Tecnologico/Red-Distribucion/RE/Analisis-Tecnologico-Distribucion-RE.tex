@@ -3,23 +3,76 @@
 
 Para brindar el servicio de \textit{Triple Play} a los abonados de la localidad de Papagayos se plantea un radioenlace punto a punto de Mediana Capacidad (cuya frecuencia se determina entre 3 Ghz y 15 Ghz), digital, de largo alcance y alto ancho de banda, entre dos estaciones terminales ubicadas en las dos localidades mencionadas. Sin embargo, como se puede apreciar en la Figura \ref{dem-figuras:fig13} no hay linea de vista entre las mismas, por lo cual se utiliza una estación repetidora.
 
+\FigureDEM{H}{12}{fig13}{Perfil topográfico entre estaciones terminales.}
 
 Se realiza la suposición que se utiliza la torre previamente instalada en la oficina central ubicada en Carpintería. De esta forma se plantea la ubicación y equipamiento del repetidor y receptor.
 
 
-\FigureDEM{H}{12}{fig13}{Perfil topográfico entre estaciones terminales.}
-%Las ubicaciones detalladas de las estaciones se presentan en las Figuras \ref{dem-figuras:estacion_carpinteria}, \ref{dem-figuras:estacion_repetidora} y \ref{dem-figuras:estacion_papagayosPNG} .
+Para la viabilidad del radioenlace se establece que debe haber un despeje de la zona de Fresnel de al menos el 60 \% y un margen de recepción de 20 dB. Dicho cálculo se realiza utilizando software desarrollado para esta tarea.
+
+
+\subsection{Ubicación de estaciones}
+
 \begin{enumerate}
 \item[•]La estación transmisora se encuentra establecida sobre la ciudad de Carpintería, la Figura \ref{dem-figuras:estacion_carpinteria} permite identificar la posición donde esta ubicada la instalación de la misma.
 \FigureDEM{H}{12}{estacion_carpinteria}{Ubicación de estación transmisora.}
 
 
 \item[•]La estación repetidora se coloca sobre las cercanías de una escuela ubicada sobre la ruta provincial N $^{\circ}$ 6, aproximadamente a 8 km al este de Concarán. La Figura \ref{dem-figuras:estacion_repetidora} ilustra la ubicación de la misma.
+Dicho lugar es el de mayor cercanía entre las dos localidades que permite la viabilidad del enlace, posee acceso a energía eléctrica, y se encuentra en una posición estratégica para futuras ampliaciones sobre ciudades vecinas.
+
 \FigureDEM{H}{12}{estacion_repetidora}{Ubicación de estación repetidora.}
 
 
 \item[•]La estación receptora se coloca a la altura de la curva que atraviesa la ciudad de Papagayos. La Figura \ref{dem-figuras:estacion_papagayosPNG} ilustra la posición de la misma.
 
 \FigureDEM{H}{12}{estacion_papagayosPNG}{Ubicación de estación receptora.}
+
 \end{enumerate}
 
+\subsection{Equipos necesarios}
+
+Se precisan torres de telecomunicación que permitan el soporte de la antena a las alturas especificadas en la Tabla \ref{tab:alturas-torres}. Se decide colocar una torre autosoportada, ya que las mismas adquieren una cimentación adecuada para terrenos ubicados en áreas urbanas y cerros, de forma que logren resistir las fuerzas a las que están sometidas.
+
+\begin{table}[H]
+    \begin{tabular}{|l|l|}
+    \hline
+    \rowcolor[rgb]{ .773,  .851,  .945} \textbf{Carpinteria} & \cellcolor[rgb]{ 1,  1,  1} m \bigstrut\\
+    \hline
+    \rowcolor[rgb]{ .773,  .851,  .945} \textbf{Repetidor} & \cellcolor[rgb]{ 1,  1,  1} m \bigstrut\\
+    \hline
+    \rowcolor[rgb]{ .773,  .851,  .945} \textbf{Papagayos} & \cellcolor[rgb]{ 1,  1,  1} m \bigstrut\\
+    \hline
+    \end{tabular}%
+  \centering
+  \caption{Alturas de las torres.}
+  \label{tab:alturas-torres}%
+\end{table}%
+
+La banda de frecuencias a las cuales se establece el enlace corresponde a 7725 Mhz hasta 8500 Mhz. A pesar que la mayoría de los equipos de transmisión y recepción analizados ofrecen una antena incorporada, no adquieren la ganancia necesaria en la banda especificada. Se decide utilizar una antena exterior, cuyas características se ilustran en la Tabla \ref{tab:caracteristicas-antena} .
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|l|l|l|}
+\hline
+\rowcolor[HTML]{C5D9F1}{ \textbf{Diametro{[}m{]}}} & { \textbf{Ganancia{[}dBi{]}}} & { \textbf{\footnotesize{Discriminación de Polarización Cruzada}{[}dB{]}}} & { \textbf{VSWR(R.L.,[dB])}} \\ \hline
+1,2                                             & \multicolumn{1}{c|}{37,9}                         & \multicolumn{1}{c|}{32}                                                        & \multicolumn{1}{c|}{1,15(23,1)}               \\ \hline
+\end{tabular}
+\caption{Características principales Antena.}
+\label{tab:caracteristicas-antena}
+\end{center}
+\end{table}
+
+ 
+Los equipos de transmisión y recepción pueden adquirir diversas configuraciones:
+
+\begin{enumerate}
+\item[•]All Outdoor: Tanto la unidad de radio, como el módem que interconecta la radio con el backbone, se colocan sobre la torre.
+
+\item[•]All Indoor: Tanto la unidad de radio, como el módem que interconecta la radio con el backbone, se colocan sobre la caseta.
+
+\item[•]Split Mount: La unidad de radio se coloca sobre la torre, mientras que el módem se coloca en la caseta.
+\end{enumerate}
+
+
+Tras analizar los equipos se pondera el precio como un factor crucial para la decisión, también se tiene en cuenta la disponibilidad de asistencia técnica e información ofrecida. Bajo estas consideraciones se decide utilizar el equipo Cambium PTP 820-S.
