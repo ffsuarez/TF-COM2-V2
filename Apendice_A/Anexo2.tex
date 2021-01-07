@@ -1,0 +1,95 @@
+\section{Cálculo de enlace óptico}
+Para realizar el cálculo del enlace, se utiliza la Ecuación \ref{eq1}, la cual toma en cuenta las atenuaciones por fibra óptica, empalmes y conectores, margen para cable y equipo.
+
+\begin{equation}\label{eq1}
+P_{th}+P_{isi}\leq W-(N_1\times A_c)-(N_2\times L\times A_e)-(Af_o\times L)-(M_c\times A_e\times L)-M_e
+\end{equation}
+
+Donde
+
+\begin{enumerate}
+
+\item[•] Sobre el terminal de linea:
+
+$P_{th}$: Valor de la potencia umbral del receptor (BER=$10^{-10}$) en dBm
+
+$P_{isi}$: Penalidad por interferencia intersimbolo ($\leq 1dB$)
+
+$W$: Potencia de salida del transmisor en el conector de salida del terminal de linea en dBm.
+
+\item[•] Sobre el cable óptico:
+
+$N_1$: Número de conectores como distribuidor de FO
+
+$A_c$: La atenuación del conector en dB.
+
+$N_2$: Número de empalmes por unidad de longitud.
+
+$L$: Longitud del enlace en Km.
+
+$A_e$: Es la atenuación del empalme en dB.
+
+$Af_o$: Es la atenuación de la FO en $dB/Km$.
+
+
+\item[•] Márgenes adicionales
+
+$M_c$: Es el margen del cable en $dB/Km$. Toma en cuenta las operaciones de reintalación y reenrutamiento.
+
+$M_e$: Es el margen del equipo en $dB/Km$. Toma en cuenta la degradación del emisor y detector.  
+
+
+
+\end{enumerate}
+
+El cable fibra óptica se comercializa en rollos. En el mercado se encuentran disponibles rollos de 4000 m. Para un tendido de 33,22 Km, se necesitan 9 rollos de cable óptica, lo que implica la utilización de 8 empalmes. 
+
+
+\subsubsection{Cálculo de enlace con cable óptico TDS-FO-001}
+
+
+
+Los parámetros son:
+\begin{enumerate}
+\item[•] Sobre el terminal de línea:
+
+$P_{th}$: -24 dBm.
+
+$P_{isi}$: ($\leq 1dB$).
+
+$W$: -3 dBm.
+
+\item[•] Sobre el cable óptico:
+
+$N_1$: 2.
+
+$A_c$: 0.2 dB. Conector LC, valor extraído del datasheet.
+
+$N_2$: 8 empalmes/33,22 Km=0,24.
+
+$L$: 33,22 Km.
+
+$A_e$: 0.01 dB en empalmes por fusión.
+
+$Af_o$: 0,23 $dB/Km$.
+
+
+\item[•] Márgenes adicionales
+
+$M_c$: $https://www.textoscientificos.com/redes/fibraoptica/calculo-enlace$ Se adoptan valores de 0.1 $dB/Km$.
+
+$M_e$: Valores adecuados para el margen entre 5 y 10 dB. Se toma un valor intermedio igual a 5 dB.
+
+
+
+\end{enumerate}
+Reemplazando estos valores en la Ecuación \ref{eq1}, se obtiene la Ecuación \ref{eq4}
+
+\begin{equation} \label{eq4}
+-24\,\leq -3-(2\times 0,2)-(0,24\times 33,22\,\times 0,01)-(0,23\,\times 33,22)-(0,1\,\times 0,01\,\times 33,22)-5=-16,15
+\end{equation}
+
+La Ecuación \ref{eq4} indica el cumplimiento de la desigualdad, con un margen del sistema de 7,85 dB. Por lo general, se requiere un margen del sistema de 5 a 10 dB para tomar en cuenta el deterioro de los componentes con el tiempo y la posibilidad de que sea necesario la utilización de más empalmes por el posible corte del cable en forma accidental. El margen obtenido en la Ecuación \ref{eq4} cumple con el requisito del margen del sistema. De esta forma, el enlace es factible.
+
+
+
