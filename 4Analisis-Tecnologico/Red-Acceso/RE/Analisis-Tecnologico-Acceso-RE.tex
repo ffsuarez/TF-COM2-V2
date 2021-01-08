@@ -1,1 +1,52 @@
 \section{Red de Acceso Inalámbrico}
+Se considera el montaje de una red inalámbrica de acceso sobre la localidad de Papagayos. Para el enlace troncal planteado a través de un radioenlace  y por fibra óptica, la interconexión con el mismo se plantea con los siguientes esquemas:
+\begin{enumerate}
+\item[•]En el caso de un enlace troncal por microondas, se interconecta a través de la unidad de radio ODU, utilizando un router de última milla junto a un switch. La Figura \ref{dem-figuras:comobajo_accespoint} ilustra el esquema explicado anteriormente.
+
+\FigureDEM{H}{12}{comobajo_accespoint}{Topología planteada para enlace troncal por radioenlace y red acceso inalámbrica.}
+
+
+\item[•]Para un enlace troncal a través de fibra óptica se plantea una topología similar la cuál se ilustra en la Figura \ref{dem-figuras:comobajo_fibraoptica} .
+
+
+\FigureDEM{H}{12}{comobajo_fibraoptica}{Topología planteada para enlace troncal por fibra óptica y red acceso inalámbrica.}
+
+
+\end{enumerate}
+
+
+Sobre cada hogar debe colocarse un equipo CPE (\textit{Customer Premises Equipment}) el cuál permite la conexión al servicio desde el AP (Access Point). La estructura general de la red planteada se puede observar en la Figura \ref{dem-figuras:figE7}.
+
+\FigureDEM{H}{11}{figE7}{Estructura General de Red de Acceso Inalámbrica.}
+
+Para determinar el número de APs necesarios, se determina la máxima tasa demandada por un hogar.
+Para la determinación de la tasa necesaria por hogar, se selecciona el pack Oro, el cual posee la tasa de transmisión mayor entre los distintos paquetes. De esta forma, la red de acceso inalámbrica se está sobredimensionando para lograr abastecer un posible crecimiento de demanda de servicios.
+
+Considerando el mayor consumo posible de tasa en un hogar, el cual ocurre con el uso simultaneo de VoIP, Internet y la sintonización de un canal HD y, además, en promedio, existe 1,5 televisores por hogar, con estas consideraciones se analiza  la tasa consumida por vivienda.
+
+\begin{itemize}
+\item Servicio de televisión:
+
+La tasa de este servicio es totalmente independiente del número de clientes que lo contrata. Al tomar un promedio de 1,5 televisores por hogar, el peor de los casos se presenta cuando se utiliza el canal HD. La tasa de bits calculada se muestra continuación:
+
+\begin{equation}
+Tasa=1,5 * 6Mbps= 9Mbps
+\end{equation}
+
+\item Internet y VoIP:
+
+La tasa del Plan seleccionado para internet es de 6 Mbps con un índice de simultaneidad de 1:4 y para VoIP de 30 kbps.
+
+\begin{equation}
+Tasa_{HOGAR}=Tasa_{VoIP}+\dfrac{Tasa_{Internet}}{F_{Simultaneidad}} +Tasa_{Canal\hspace{0.15cm}HD}
+\end{equation}
+
+\begin{equation}
+Tasa_{HOGAR}=0.03 Mbps + \dfrac{6Mbps}{4}+ 1.5*6 Mbps=10.53Mbps
+\label{m3}
+\end{equation}
+
+A partir de la tasa de televisión, internet y VoIP se requiere que la capacidad total por abonado sea de 10,53 Mbps aproximadamente.
+\end{itemize}
+
+Considerando que el ancho de banda demandado en el peor de los casos corresponde a 61 clientes sintonizando un canal. Entonces la tasa máxima consumida se indica en la ecuación \ref{m2}.
