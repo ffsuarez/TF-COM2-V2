@@ -45,7 +45,7 @@ $M_e$: Es el margen del equipo en $dB/Km$. Toma en cuenta la degradación del em
 El cable fibra óptica se comercializa en rollos. En el mercado se encuentran disponibles rollos de 4000 m. Para un tendido de 33,22 Km, se necesitan 9 rollos de cable óptica, lo que implica la utilización de 8 empalmes. 
 
 
-\subsubsection{Cálculo de enlace con cable óptico TDS-FO-001}
+\subsection{Cálculo de enlace con cable óptico}
 
 
 
@@ -71,7 +71,7 @@ $L$: 33,22 Km.
 
 $A_e$: 0.01 dB en empalmes por fusión.
 
-$Af_o$: 0,23 $dB/Km$.
+$Af_o$: 0,3 $dB/Km$.   %antes era 0,23
 
 
 \item[•] Márgenes adicionales
@@ -86,10 +86,10 @@ $M_e$: Valores adecuados para el margen entre 5 y 10 dB. Se toma un valor interm
 Reemplazando estos valores en la Ecuación \ref{eq1}, se obtiene la Ecuación \ref{eq4}
 
 \begin{equation} \label{eq4}
--24\,\leq -3-(2\times 0,2)-(0,24\times 33,22\,\times 0,01)-(0,23\,\times 33,22)-(0,1\,\times 0,01\,\times 33,22)-5=-16,15
+-24\,\leq -3-(2\times 0,2)-(0,24\times 33,22\,\times 0,01)-(0,3\,\times 33,22)-(0,1\,\times 0,01\,\times 33,22)-5=-18,47
 \end{equation}
-
-La Ecuación \ref{eq4} indica el cumplimiento de la desigualdad, con un margen del sistema de 7,85 dB. Por lo general, se requiere un margen del sistema de 5 a 10 dB para tomar en cuenta el deterioro de los componentes con el tiempo y la posibilidad de que sea necesario la utilización de más empalmes por el posible corte del cable en forma accidental. El margen obtenido en la Ecuación \ref{eq4} cumple con el requisito del margen del sistema. De esta forma, el enlace es factible.
+%antes era -16,15
+La Ecuación \ref{eq4} indica el cumplimiento de la desigualdad, con un margen del sistema de 5,52 dB. Por lo general, se requiere un margen del sistema de 5 a 10 dB para tomar en cuenta el deterioro de los componentes con el tiempo y la posibilidad de que sea necesario la utilización de más empalmes por el posible corte del cable en forma accidental. El margen obtenido en la Ecuación \ref{eq4} cumple con el requisito del margen del sistema. De esta forma, el enlace es factible.
 
 
 
