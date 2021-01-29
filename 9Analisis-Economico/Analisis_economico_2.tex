@@ -54,7 +54,70 @@ Los costos del OPEX se detallan a continuación:
 \item Costo de mantenimiento: Los costos se encuentran detallados en la seccion ANTERIOR y posee un valor de us\$ 1726,64
 
 \item Adquisición de datos y televisión a la empresa mayorista: se negocia un cotrato en el cual inicialmete se adquiere 500 Mbps a traves de un proveedor del mercado local(por ejemplo Telecom) y se compromete a la adquisición de  1 Gb en un plazo de 10 años. El costo mensual es de US\$ 1166, dando un total de US\$ 14000 anuales.
+%----------
 
+\subsection{Servicio de datos mayorista}
+Para la conexión del enlace troncal a internet se puede optar por dos alternativas
+en general:
+\begin{enumerate}
+\item[•]Solicitar a un proveedor troncal el acceso.
+\item[•]A partir de dos o más operadores de red, se comprometen acceso mutuo a sus
+bases de clientes para el intercambio de tráfico, a esto se lo denomina ''peering".
+
+Actualmente se efectúan acuerdos de peering y tránsito entre ISP's, proveedores
+troncales regionales e internacionales y proveedores de contenido.
+\end{enumerate}
+
+Los proveedores de red troncales del mercado local son los siguientes:
+\begin{enumerate}
+\item[•]ARLINK SA.
+\item[•]GLOBAL TECHNOLOGY S.R.L.
+\item[•]SIDECOM S.R.L.
+\item[•]TECOAR SA.
+\item[•]SILICA NETWORKS ARGENTINA SA.
+\item[•]NETWORKING SOLUTIONS
+\item[•]TELECOM.
+\end{enumerate}
+%Fuentes: https://www.cabase.org.ar/nap-san-luis/
+%Fuentes: http://listas.unsl.edu.ar/pipermail/unsl/2016-April/011142.html
+
+
+
+Debido a que el peering es costoso, se tiende a agregar puntos
+neutrales de interconexión, denominados ''plataformas de interconexión" (IXP).
+Cabe destacar que también se los denomina NAP (Network Access Point).
+%Fuente: http://papel.revistafibra.info/entrevista-con-ariel-graizer/#:~:text=Un%20NAP%20es%20un%20punto,es%20IXP%2C%20internet%20exchange%20point.&text=Un%20punto%20de%20intercambio%20de%20tr%C3%A1fico%20es%20aquel%20donde%20los,con%20otros%20operadores%20de%20redes.
+
+Dicha plataforma facilita y reduce el costo del tráfico IP entre los distintos integrantes de este
+ecosistema, a nivel regional, y a nivel internacional, y además mejora la calidad
+del servicio.
+
+En particular los proveedores mencionados anteriormente forman un IXP llamado 
+''IXP San Luis", con lo cual, se decide gestionar la incorporación de la 
+empresa a dicha plataforma.
+
+El costo total de adquisición del servicio se lo puede describir como la
+suma del costo del transito a través de la red, sumado al costo del tránsito
+a través de peering.
+
+Sin embargo como el costo del peering decrementa de forma exponencial
+según el nivel de tránsito que desea asignarse, se decide no utilizar 
+dicha implementación. 
+
+Por lo tanto el costo de la contratación del ancho de banda para el enlace 
+troncal se efectúa solamente a partír del costo del tráfico regular por la
+red, el cual es igual a 
+US\$ 200 mensuales . %Fuente: https://www.lacnic.net/innovaportal/file/2569/1/2018-lac-peering-forum-peering-in-south-america.pdf
+US\$ 6 Mbps por mes $\cdot$ 172 Mbps %Misma fuente que antes pero me parece que no es correcto
+US\$ 28 Mbps por mes $\cdot$ 172 Mbps %Fuente de la UIT-D
+
+
+
+
+
+
+
+%----------
 \item adquisición de telefonia Ip:
 
 
