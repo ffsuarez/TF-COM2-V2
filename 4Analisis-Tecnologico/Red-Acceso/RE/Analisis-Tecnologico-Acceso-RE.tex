@@ -91,7 +91,7 @@ Teniendo en cuenta el esquema de conexión de las Figuras \ref{dem-figuras:comob
     \hline
     \rowcolor[rgb]{ .773,  .851,  .945} \textbf{Modelo} & \textbf{Fabricante} & \textbf{Nro. Puertos} & \textbf{Costo US\$} \bigstrut\\
     \hline
-    ES-10X &   Ubiquiti    & 8 puertos GE / 2 puertos SFP+ & 120 \bigstrut\\
+    ES-10X &   Ubiquiti    & 8 puertos GE / 2 puertos SFP+ & 120\cite{switch} \bigstrut\\
     \hline
     \end{tabular}%
 	\caption{Características del switch.}
@@ -109,7 +109,7 @@ Teniendo en cuenta el esquema de conexión de las Figuras \ref{dem-figuras:comob
     \hline
     \rowcolor[rgb]{ .773,  .851,  .945} \textbf{Modelo} & \textbf{Fabricante} & \textbf{Nro. Puertos} & \textbf{Costo US\$} \bigstrut\\
     \hline
-    EdgeRouter 4 & Ubiquiti & 4 puertos GE / 1 puerto SFP+/ 1 entrada USB para comunicación interna & 120 \bigstrut\\
+    EdgeRouter 4 & Ubiquiti & 4 puertos GE / 1 puerto SFP+/ 1 entrada USB para comunicación interna & 120\cite{estefi3} \bigstrut\\
     \hline
     \end{tabular}%
 	\caption{Características del router.}
@@ -135,7 +135,7 @@ Para la elección de los dispositivos APs se tuvieron en cuenta 3 candidatos, mo
 \cline{6-7}          &       &       &       &       & IEEE 802.3af & Estándar PoE para alimentar equipos &  \bigstrut\\
 \cline{6-7}          &       &       &       &       & IEEE 802.11a / n & Velocidad de transmision &  \bigstrut\\
     \hline
-    \multirow{3}[6]{*}{ePMP 1000 Force 180} & \multirow{3}[6]{*}{Cambium Networks} & \multirow{3}[6]{*}{30} & \multirow{3}[6]{*}{-90} & \multirow{3}[6]{*}{Outdoor} & IEEE 802.1Q con IEEE 802.1p & VLAN con priorización de tráfico  & \multirow{3}[6]{*}{180} \bigstrut\\
+    \multirow{3}[6]{*}{ePMP 1000 Force 180} & \multirow{3}[6]{*}{Cambium Networks} & \multirow{3}[6]{*}{30} & \multirow{3}[6]{*}{-90} & \multirow{3}[6]{*}{Outdoor} & IEEE 802.1Q con IEEE 802.1p & VLAN con priorización de tráfico  & \multirow{3}[6]{*}{180 \cite{E14}} \bigstrut\\
 \cline{6-7}          &       &       &       &       & IEEE 802.11n & MIMO  &  \bigstrut\\
 \cline{6-7}          &       &       &       &       & IEEE 802.11a/b/g & Velocidad de transmision  &  \bigstrut\\
     \hline
@@ -144,6 +144,8 @@ Para la elección de los dispositivos APs se tuvieron en cuenta 3 candidatos, mo
   \label{tab:caracteristicas-aps}%
 \end{table}%
 
+
+%Precio del equipo OSBRIDGE: http://www.sklep.winet.com.pl/osbridgeseria5n/c/24
 
 Estos equipos cumplen con las regulaciones que rigen en el país, ofrecen tasas de transmisión máximas similares, sin embargo se decanta por el último modelo listado (“ePMP 1000 Force 180” de la empresa Cambium Networks), debido a que en la Red de distribución se opta por el uso de dispositivos fabricados por estas empresa, por lo cual es más conveniente para el proceso de capacitación del personal técnico, las posibilidades de trabajo en conjunto con la empresa fabricante incrementan considerablemente, por lo cual es posible obtener beneficios tales como descuentos, o asistencia técnica. Otro motivo importante es la cantidad de información disponible, lo cual adquiere un gran valor en el momento de la resolución de futuros problemas en la red.
 
@@ -162,7 +164,7 @@ En el análisis de la cobertura del servicio se consideraron dos equipos, los cu
     \hline
     \rowcolor[rgb]{ .773,  .851,  .945} \textbf{Modelo} & \textbf{Fabricante} & \textbf{TX(dBm)} & \textbf{RX(dBm)} & \textbf{Montaje de Equipo} & \textbf{Estandar} &       & \textbf{Costo (US\$)} \bigstrut\\
     \hline
-    \multirow{3}[6]{*}{ePMP Force 130} & \multirow{3}[6]{*}{Cambium Networks} & \multirow{3}[6]{*}{28} & \multirow{3}[6]{*}{-88} & \multirow{3}[6]{*}{Outdoor} & IEEE 802.1Q con IEEE 802.1p & VLAN, priorización de tráfico  & \multirow{3}[6]{*}{140} \bigstrut\\
+    \multirow{3}[6]{*}{ePMP Force 130} & \multirow{3}[6]{*}{Cambium Networks} & \multirow{3}[6]{*}{28} & \multirow{3}[6]{*}{-88} & \multirow{3}[6]{*}{Outdoor} & IEEE 802.1Q con IEEE 802.1p & VLAN, priorización de tráfico  & \multirow{3}[6]{*}{140 \cite{CPE}} \bigstrut\\
 \cline{6-7}          &       &       &       &       & IEEE 802.11n & MIMO  &  \bigstrut\\
 \cline{6-7}          &       &       &       &       & IEEE 802.11a/b/g & Velocidad de transmision  &  \bigstrut\\
     \hline
