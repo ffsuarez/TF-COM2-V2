@@ -1,4 +1,4 @@
-\section{Anexo C: Flujo de Caja del Negocio}
+ \section{Anexo C: Flujo de Caja del Negocio}
 La proyección del flujo de caja se evalúa a través de la información recopilada a lo largo del informe. Gracias al mismo es posible evaluar la posible rentabilidad del negocio.
 
 \subsection{Estructura}
@@ -15,21 +15,13 @@ La estructura del Flujo se basa en la siguiente Tabla:
     \hline
     \textcolor[rgb]{ 1,  0,  0}{- Intereses del préstamo} \bigstrut\\
     \hline
-    \textcolor[rgb]{ 1,  0,  0}{- Gastos no desembolsables} \bigstrut\\
-    \hline
     \textcolor[rgb]{ 0,  .439,  .753}{= Utilidad antes del impuesto} \bigstrut\\
     \hline
     \textcolor[rgb]{ 1,  0,  0}{- Impuesto} \bigstrut\\
     \hline
-    \textcolor[rgb]{ 0,  .69,  .314}{+ Ajustes por gastos no desembolsables} \bigstrut\\
-    \hline
     \textcolor[rgb]{ 1,  0,  0}{- Egresos no afectos a impuestos} \bigstrut\\
     \hline
-    \textcolor[rgb]{ 0,  .69,  .314}{+ Beneficios no afectos a impuestos} \bigstrut\\
-    \hline
     \textcolor[rgb]{ 0,  .69,  .314}{+ Préstamo} \bigstrut\\
-    \hline
-    \textcolor[rgb]{ 1,  0,  0}{- Amortización de la deuda} \bigstrut\\
     \hline
     \textcolor[rgb]{ 0,  .439,  .753}{= Flujo de Caja} \bigstrut\\
     \hline
@@ -73,6 +65,15 @@ N_{abonados-plan-oro}\cdot Precio_{plan-oro}=Ingreso_{plan-oro}
 Calculado a través de la tarifa mostrada en el Capítulo VIII del informe. Considerando que las publicidades del tipo
 rotativo comercial, digitado comercial mañana y publicidad política se repiten hasta 4 veces por día.
 
+
+
+\item[•]Ingresos por alquiler de fibra oscura.
+
+
+
+
+
+
 \end{enumerate}
 
 \item[•]\textbf{Egresos afectos a impuestos}:
@@ -91,17 +92,21 @@ Costo_{mensual}\cdot 12 = Costo_{anual}
 \item[•]Costo del servicio de SDTV,HDTV: Conseguido a través del pago de un canon para acceder al Hub de Contenidos del CABASE.
 El cual es un servicio disponible a los proveedores ISP que se encuentran asociados a algún IXP.
 %Fuente: https://www.cabase.org.ar/wp-content/uploads/2020/01/Folleto-Hub-de-Contenidos_c-1.pdf
-Calculado a partír de la siguiente ecuación:
 
-\begin{equation}
-Costo_{mensual-SDTV-HDTV}\cdot 12 = Costo_{anual-SDTV-HDTV}
-\end{equation}
+%Calculado a partír de la siguiente ecuación:
+%
+%\begin{equation}
+%Costo_{mensual-SDTV-HDTV}\cdot 12 = Costo_{anual-SDTV-HDTV}
+%\end{equation}
+
+Se considera que el costo corresponde al 35\% del precio de internet mayorista.
+
 
 \item[•]VoIP mayorista: Calculado a partír del costo del servicio mayorista de internet.
-Calculado a partir de la siguiente ecuación:
+A partir de la siguiente ecuación:
 
 \begin{equation}
-Costo_{mensual-VoIP}\cdot 12 = Costo_{anual-VoIP}
+11,03 \dfrac{US\$}{Mbps} \cdot 1,83 Mbps + 11,03 \cdot 30 Kbps * N_{usuarios-nuevos}
 \end{equation}
 
 \item[•]Equipos y accesorios de telecomunicaciones: Este item se encuentra compuesto por los precios de los equipos y accesorios 
@@ -111,11 +116,10 @@ y Acceso por Fibra Óptica.
 
 \item[•]Costo de Nuevas Conexiones: Se lo define como el gasto en el que la empresa adquiere cuando realiza una nueva conexión al servicio.
 %Se estima que en el futuro la expansión del numero de abonados sera la siguiente:
-Según un informe del Observatorio Permanente de la Industria del Software y Servicios Informáticos de la República
-(OPSSI), en febrero de 2019 se espera una evolución de las ventas anual de alrededor del 25\%, 
-en este caso se considera que dicha evolución se establece en un plazo de 5 años.
-A partir de esta etapa, se supone que el servicio se encuentra en su etapa de crecimiento pleno, de forma tal que el número de
-abonados al servicio incrementa un 6\% anual.
+%Según un informe del Observatorio Permanente de la Industria del Software y Servicios Informáticos de la República
+%(OPSSI), en febrero de 2019 se espera una evolución de las ventas anual de alrededor del 25\%, 
+En este caso se considera que dicha evolución se establece a partír del 5$^{\circ}$año.
+A partir de esta etapa, se supone que el servicio se encuentra en su etapa de crecimiento pleno, de forma tal que el número de abonados al servicio incrementa un 6\% anual.
 
 \begin{enumerate}
 \item[•]1$^{\circ}$Año:61 clientes.
@@ -172,6 +176,16 @@ Los valores incluidos en esta categoría son los siguientes:
 \end{enumerate}
 
 \item[•]Con respecto al pago del IVA de posiciones mensuales (El calculo del monto se ilustra en la seccion inferior de la Tabla de Flujos).
+
+
+
+\item[•]IVA Adicional (21\%): Es el impuesto sobre la mano de obra contratada para la construcción de la red.
+
+\item[•]IVA tasa general (10,5\%): Es el impuesto sobre la compra del equipamiento de la red.
+
+\item[•]Tasa de Servicio Universal: Es el impuesto correspondiente al 1\% de la totalidad de los ingresos netos por la prestación de los servicios.
+
+\item[•]Tasa Control, Fiscalización y Verificación: Es el impuesto del 0,5\% sobre el total de los ingresos netos que se obtengan por los servicios prestados.
 
 \end{enumerate}
 
